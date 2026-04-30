@@ -102,3 +102,23 @@ int main(){
     }
     return 0;
 }
+
+----------------------------------------------------------------
+
+//take input from user and find sum and average
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b,c,sum;
+    float average;
+    
+    cin>>a>>b>>c;
+    sum = a+b+c;
+    average = sum / 3.0;
+    
+    cout << sum << endl;
+    cout << average << endl;
+    
+    return 0;
+}    
