@@ -1,0 +1,17 @@
+//Temperature consversion
+//take inpur in form of celcius and convert to  farenheit...
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    
+    double celcius; 
+    double farenheit;
+    cin >> celcius;
+    farenheit = (celcius * 9.0 / 5.0) + 32.0;
+    cout << farenheit << endl;
+    
+    return 0;
+
+}
