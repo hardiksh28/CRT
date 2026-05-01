@@ -61,3 +61,22 @@ int main(){
     }
     return 0;
 }
+
+----------------------
+
+//Problem 4 -- Ternary operator
+//Find greater number among int32_t
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    int max_Number;
+    
+    cin >>a >>b;
+    //Ternary operator
+    max_Number = (a>b) ? a:b;
+    
+    cout << max_Number;
+    return 0;
+}
