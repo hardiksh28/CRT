@@ -17,7 +17,7 @@ int main (){
 ----------------
 
 //Problem-2 -- If - else condition
-//to verify users age wether wligible for vote or not?
+//to verify users age wether eligible for vote or not?
 #include<iostream>
 using namespace std;
 
@@ -38,7 +38,7 @@ int main (){
 -----------------
 
 //Problem-3 -- Nested If - else condition
-//to verify users age wether wligible for vote or not?
+//to verify users age wether eligible for vote or not?
 #include<iostream>
 using namespace std;
 
