@@ -183,3 +183,21 @@ int main(){
 
 --------------------
 
+//Problem 11
+//Bottle jar filler or overflow (while loop)
+#include<iostream>
+using namespace std;
+
+int main(){
+    int currentWater = 0;
+    int add;
+    
+    while(currentWater < 500){
+        cout << "Glass has " << currentWater << "ml and how much?";
+        cin >> add;
+        
+        currentWater = currentWater + add;
+    }
+    cout << "Glass is filled with "<< currentWater << "ml water";
+    return 0;
+}
