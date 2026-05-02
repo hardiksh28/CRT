@@ -27,7 +27,7 @@ int main(){
 -----------------
 
 //Problem 3 -- 
-//Print 1 to 10 using a while
+//Print 1 to 10 using a while loop
 #include<iostream>
 using namespace std;
 
@@ -43,7 +43,7 @@ int main(){
 -------------------
 
 //Problem 4 -- 
-//Print 10 to 1 using a while
+//Print 10 to 1 using a while loop
 #include<iostream>
 using namespace std;
 
@@ -58,3 +58,32 @@ int main(){
 
 ---------------------
 
+//Problem 5 -- 
+//Print 1 to 10 using a do-while loop
+#include<iostream>
+using namespace std;
+
+int main(){
+    int i = 1;
+    do{
+        cout << i << " ";
+        i++;
+    }while(i <= 10);
+    return 0;
+}
+
+-----------------------
+
+//Problem 6 -- 
+//Print 10 to 1 using a do-while loop
+#include<iostream>
+using namespace std;
+
+int main(){
+    int i = 10;
+    do{
+        cout << i << " ";
+        i--;
+    }while(i >= 1);
+    return 0;
+}
