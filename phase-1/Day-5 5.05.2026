@@ -18,12 +18,15 @@ int main(){
     int n;
     cin >> n;
     
+    //Print upper triangle
     for(int i=1; i<=n; i++){
         for(int j=1; j<=i; j++){
             cout << "*";
         }
         cout << "\n";
     }
+    
+    //Print lower form here
     for(int k =n-1; k>=1; k--){
         for(int l=1; l<=k; l++){
             cout << "*";
@@ -32,5 +35,5 @@ int main(){
     }
 }
 
----------------------------
+----------------------------------
 
