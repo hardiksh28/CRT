@@ -110,3 +110,17 @@ int main(){
     return 0;
 }
 
+
+//4.3 No argument but return type
+
+#include<iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+}
+
+int main(){
+    cout << ticketNumber();
+    return 0;
+}
