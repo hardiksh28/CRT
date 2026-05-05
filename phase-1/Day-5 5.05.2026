@@ -95,3 +95,18 @@ int main(){
     return 0;
 }
 
+
+//4.2 Argument, No return Type 
+
+#include<iostream>
+using namespace std;
+
+void sendText(string message){
+    cout << message;
+}
+
+int main(){
+    sendText("BJP wons...");
+    return 0;
+}
+
