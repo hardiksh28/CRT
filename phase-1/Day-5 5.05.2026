@@ -36,3 +36,21 @@ int main(){
 
 ----------------------------------
 
+//Problem 2
+//Function declaration and initialization
+
+#include<iostream>
+using namespace std;
+
+void printMessage(){
+    cout << "Hi we learning functions...";
+}
+
+
+int main(){
+    printMessage();
+    return 0;
+}
+
+----------------------------------
+
