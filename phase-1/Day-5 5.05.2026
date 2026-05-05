@@ -142,3 +142,32 @@ int main(){
 
 --------------------------------
 
+//Problem 5
+//Function Overloading
+
+#include<iostream>
+using namespace std;
+
+int add(int a, int b){
+    return a+b;
+}
+
+int add(int a, int b, int c){
+    return a+b+c;
+}
+
+int add(int a, int b, int c, int d){
+    return a+b+c+d;
+}
+
+int main(){
+    cout<<add(5,2) << "\n";
+    cout<<add(5,2,3) << "\n";
+    cout<<add(5,2,3,4) << "\n";
+    
+    return 0;
+}
+
+-------------------------------
+
+
