@@ -1,16 +1,15 @@
 //Problem 1 
 //Pattern Printing Upper Right angle and its opposite
 //Print -- 
-*
-**
-***
-****
-*****
-****
-***
-**
-*
-
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
 #include<iostream>
 using namespace std;
 
