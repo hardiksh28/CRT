@@ -188,4 +188,20 @@ int main(){
 
 -------------------------------
 
+//Problem 7
+// sum of 2 numbers using pointers
 
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    cin >> a;
+    cin >> b;
+    
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    
+    int sum = *ptr1 + *ptr2;
+    cout << sum;
+}
