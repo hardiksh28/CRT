@@ -170,4 +170,22 @@ int main(){
 
 -------------------------------
 
+//Problem 6 
+//Pointers
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int age = 24;
+    int *ptr = &age;
+    
+    cout << age << "\n";
+    cout << ptr << "\n";
+    cout << *ptr;
+}
+
+-------------------------------
+
 
