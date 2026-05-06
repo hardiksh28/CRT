@@ -146,3 +146,22 @@ int main(){
 }
 
 -------------------
+
+//Practice Problem - 7
+
+#include<iostream>
+using namespace std;
+
+class PublicPark{
+public:
+	void enter() {
+		cout << "Anyone can enter in the park...";
+	}
+};
+
+int main() {
+	PublicPark p;
+	p.enter();
+}
+
+-------------------
