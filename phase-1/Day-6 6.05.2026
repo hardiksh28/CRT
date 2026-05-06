@@ -117,3 +117,29 @@ int main(){
 }
 
 -------------------
+
+//Practice Problem - 6
+//Classes and Objects
+
+#include<iostream>
+using namespace std;
+
+class Student {
+
+public:
+	string name;
+	int age;
+
+	void introduce() {
+		cout << "Hi there, this person name is" << name << "and his age is" << age << "\n";
+	}
+};
+
+int main(){
+    Student s1;
+    s1.name = "Hardik";
+    s1.age = 22;
+    s1.introduce();
+}
+
+-------------------
