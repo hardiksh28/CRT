@@ -83,3 +83,37 @@ int main(){
     cout << billing(coffee);
    
 }
+
+--------------------
+
+//Practice Problem - 5
+//
+
+#include<iostream>
+using namespace std;
+
+void setTemperature(int temp = 22){
+    cout << "Temperture set to "<< temp << "°C" << "\n";
+}
+
+void setTemperature(double temp){
+    cout << "Temperture set to "<< temp << "°C" << "\n";
+}
+
+void setTemperature(string mode){
+    if(mode == "ECO"){
+        cout << "Temperture set to "<< "24°C" << "\n";
+    }else if(mode == "TURBO"){
+        cout << "Temperture set to "<< "18°C" << "\n";
+    }
+}
+
+int main(){
+    setTemperature() ; //default value -- 22
+    setTemperature(20.5) ; //manually setting the template
+    setTemperature("ECO") ; //set temperature to 24
+    setTemperature("TURBO") ; //set temperature to 80
+    
+}
+
+-------------------
