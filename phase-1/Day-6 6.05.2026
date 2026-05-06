@@ -63,3 +63,23 @@ int main(){
     updatebyReference(original);
     cout << original;
 }
+
+------------------
+
+//Practice Problem
+//Coffee machine billing system
+
+#include<iostream>
+using namespace std;
+
+int billing(int a){
+    return a*30;
+}
+
+int main(){
+    
+    int coffee = 3;
+    billing(coffee);
+    cout << billing(coffee);
+   
+}
