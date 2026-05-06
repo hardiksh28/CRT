@@ -131,15 +131,18 @@ public:
 	int age;
 
 	void introduce() {
-		cout << "Hi there, this person name is" << name << "and his age is" << age << "\n";
+		cout << "Hi there, this person name is " << name << "and his age is " << age << "\n";
 	}
 };
 
 int main(){
-    Student s1;
+    Student s1,s2;
     s1.name = "Hardik";
     s1.age = 22;
+    s2.name = "Vinayak";
+    s2.age = 23;
     s1.introduce();
+    s2.introduce();
 }
 
 -------------------
