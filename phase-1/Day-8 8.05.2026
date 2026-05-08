@@ -25,3 +25,45 @@ int main() {
 	obj1.start();
 
 }
+
+--------------------
+
+#include<iostream>
+using namespace std;
+
+//Problem 1
+//Inheritance
+//Type 1.2 - Multilevel Inheritance
+
+class Vehicle {
+public:
+	void start() {
+		cout << "Vehicle Starts" << "\n";
+	}
+};
+
+class Car : public Vehicle {
+public:
+	void drive() {
+		cout<<"Car is running"<<"\n";
+	}
+};
+
+class speedoMeter : public Car {
+public:
+	void speed() {
+		cout<<"Car is running at 220km/hr" <<"\n";
+	}
+};
+
+int main() {
+	speedoMeter obj1;
+	obj1.start();
+	obj1.drive();
+	obj1.speed();
+
+
+}
+
+----------------------
+
