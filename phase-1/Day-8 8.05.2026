@@ -168,3 +168,49 @@ int main(){
 
 ---------------------
 
+//Problem 2
+//Polymorphism
+//Polymorphism means one name but many forms
+//Same function behaves differently depending on the type of the object it called
+//Two types
+//Compile time
+//Compile time Polymorphism -- Function Overloading -- Static
+//Resolved at Compile time
+//Function overloads -- same Function name, but different parameters
+//Faster execution
+//Run time Polymorphism -- Function Overloading -- Dynamic
+//Resolved at run time
+//Function runtime -- same Function name, same parameters, but different class
+//uses a virtual keyword in the base class
+//achieving this through the concept of inheritance
+
+//Types of Polymorphism --2.1
+//Function Overloading
+
+#include<iostream>
+using namespace std;
+
+class Math {
+public:
+	void add(int a, int b) {
+		cout << a + b << "\n";
+	}
+public:
+	void add(int a, int b, int c) {
+		cout << a + b + c<< "\n";
+	}
+public:
+	void add(double a, double b) {
+		cout << a + b << "\n";
+	}
+};
+
+int main() {
+	Math m;
+	m.add(5,2);
+	m.add(5,5,5);
+	m.add(5.2,2.2);
+}
+
+-----------------------
+
