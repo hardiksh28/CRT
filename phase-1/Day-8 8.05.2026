@@ -138,3 +138,33 @@ int main() {
 
 ---------------------
 
+#include<iostream>
+using namespace std;
+
+//Problem 1
+//Inheritance
+//Type 1.5 - Hybrid Inheritance
+
+class A{
+    public:
+    void print(){
+        cout << "BJP Wons"<<"\n";
+    }
+};
+class B : virtual public A{
+    //No logic
+};
+class C :virtual public A{
+    //No logic
+};
+class D : public B, public C{
+    //No logic
+};
+
+int main(){
+  D obj1;
+  obj1.print();
+}
+
+---------------------
+
