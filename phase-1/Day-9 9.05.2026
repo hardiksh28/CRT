@@ -84,3 +84,25 @@ int main() {
 
 ------------------------
 
+//Problem -3
+//Introduction to arrays + Traversal + Memory Layout
+
+#include<iostream>
+using namespace std;
+
+void traversal(int arr[], int size) {
+	for(int i = 0; i<size; i++) {
+		cout << arr[i]<< " - ";//Array content at particular index
+		cout << &arr[i]<<" "<<"\n";//Memory address
+	}
+}
+
+
+
+int main() {
+	int arr[] = {10,20,30,40,50};
+	traversal(arr, 5);
+}
+
+------------------------
+
