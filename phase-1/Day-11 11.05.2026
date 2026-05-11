@@ -32,7 +32,23 @@ int main(){
 }
 
 -------------
-242.
+Leetcode Rotate string 
+
+class Solution {
+public:
+    bool rotateString(string s, string goal) {
+        if(s.size() != goal.size()){
+            return false;
+        
+        };
+
+        string doubleString = s+s;
+        return doubleString.contains(goal);
+    }
+};
+
+-------------
+Leetcode 242.
 
 class Solution {
 public:
