@@ -21,3 +21,90 @@ public:
 };
 
 ---------------
+Leetcode #74
+
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        
+        int m = matrix.size();
+        int n = matrix[0].size();
+        
+        if(m == 0) return false;
+
+        int low = 0, high = (m * n) -1;
+
+        while(low <= high){
+            int mid = low + (high - low)/2;
+
+            int row = mid/n;
+            int col = mid%n;
+            int midValue = matrix[row][col];
+
+            if(midValue == target)
+            return true;
+            else if(midValue < target)
+            low = mid +1;
+            else
+            high = mid -1;
+        }
+        return false;
+    }
+};
+--------------------
+Leetcode #162
+
+class Solution {
+public:
+    int findPeakElement(vector<int>& nums) {
+        int low = 0;
+        int high = nums.size() - 1;
+
+        while(low < high){
+            int mid = low + (high - low)/2;
+            if(nums[mid]<nums[mid+1]){
+                low = mid+1;
+            }else{
+                high = mid;
+            }
+        }
+        return low;
+    }
+};
+---------------------
+Leetcode #33
+
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;
+
+        while(left<=right){
+            int mid = left + (right - left)/2;
+
+            if(nums[mid] == target){
+                return mid;
+            }
+            //Check the left part of the array
+            if(nums[left]<= nums[mid]){
+                if(nums[left] <= target && target < nums[mid]){
+                    right = mid - 1;
+                }else{
+                    left = mid + 1;
+                }
+            }
+            //Check the right part of the array
+            else{
+                if(nums[mid] < target && target <= nums[right]){
+                    left = mid + 1;
+                }else{
+                    right = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+};
+
+---------------------
