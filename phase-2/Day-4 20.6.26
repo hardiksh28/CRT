@@ -1,0 +1,101 @@
+//Quick sorting algorithm code
+
+#include <iostream>
+using namespace std;
+
+class QuickSortingAlgo {
+    int* ARRAY;
+    int SIZE;
+
+    // Helper method to partition the array
+    int partition(int low, int high) {
+        int pivot = ARRAY[high]; // Choosing the last element as pivot
+        int i = low - 1;         // Index of smaller element
+
+        for (int j = low; j < high; j++) {
+            // If current element is smaller than or equal to pivot
+            if (ARRAY[j] <= pivot) {
+                i++;
+                // Swap ARRAY[i] and ARRAY[j]
+                int temp = ARRAY[i];
+                ARRAY[i] = ARRAY[j];
+                ARRAY[j] = temp;
+            }
+        }
+        // Swap the pivot element with the element at i + 1
+        int temp = ARRAY[i + 1];
+        ARRAY[i + 1] = ARRAY[high];
+        ARRAY[high] = temp;
+
+        return i + 1;
+    }
+
+    // Helper method for recursion
+    void quickSortRecursive(int low, int high) {
+        if (low < high) {
+            // pi is partitioning index, ARRAY[pi] is now at right place
+            int pi = partition(low, high);
+
+            // Separately sort elements before partition and after partition
+            quickSortRecursive(low, pi - 1);
+            quickSortRecursive(pi + 1, high);
+        }
+    }
+
+public:
+    // Constructor
+    QuickSortingAlgo(int size) {
+        this->SIZE = size;
+        this->ARRAY = new int[size]; // Dynamically allocate memory
+    }
+
+    // Destructor to clean up memory
+    ~QuickSortingAlgo() {
+        delete[] ARRAY;
+    }
+
+    // Method to populate the array
+    void inputArray() {
+        cout << "Enter " << SIZE << " elements: ";
+        for (int i = 0; i < SIZE; i++) {
+            cin >> ARRAY[i];
+        }
+    }
+
+    // Public method to trigger the sort
+    void sort() {
+        quickSortRecursive(0, SIZE - 1);
+    }
+
+    // Method to display the array
+    void display() {
+        for (int i = 0; i < SIZE; i++) {
+            cout << ARRAY[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    // Create object
+    QuickSortingAlgo sorter(size);
+
+    // Input, Sort, and Display
+    sorter.inputArray();
+    
+    cout << "Original Array: ";
+    sorter.display();
+
+    sorter.sort();
+
+    cout << "Sorted Array: ";
+    sorter.display();
+
+    return 0;
+}
+------------------------------
+
