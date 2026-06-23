@@ -9,7 +9,8 @@ public:
         
     }
     
-    void push(int x) {
+    void push(int x) {                      //this push loop is created so that every new element is added to back and front elements are created a
+                                            //loop and bring the lastadded to front and then pop from the front
         q.push(x);
         int size = q.size();
         for(int i = 0; i< size - 1; i++){
