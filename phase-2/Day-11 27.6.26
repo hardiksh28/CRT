@@ -162,3 +162,84 @@ int main() {
     return 0;
 }
 -----------------------------
+Another graph 
+
+#include <iostream>
+using namespace std;
+
+
+class Graph {
+
+private:
+    int** adjacencyMatrix;
+    int nodes;
+
+public:
+
+    Graph(int n) {
+
+        nodes = n;
+        adjacencyMatrix = new int*[nodes];
+
+        for (int i = 0; i < nodes; ++i) {
+
+            adjacencyMatrix[i] = new int[nodes];
+            for (int j = 0; j < nodes; ++j) {
+                adjacencyMatrix[i][j] = 0;
+            }
+            
+        }
+
+
+    }
+
+
+    // Add Edge (Undirected)
+    void addEdge(int source, int destination) {
+
+        adjacencyMatrix[source][destination] = 1;
+
+        adjacencyMatrix[destination][source] = 1;
+
+    }
+
+
+    // Display Matrix
+    void showMatrix() {
+        for (int i = 0; i < nodes; ++i) {
+            for (int j = 0; j < nodes; ++j) {
+                cout << adjacencyMatrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+
+
+    // Destructor to free memory
+    ~Graph() {
+        for (int i = 0; i < nodes; ++i) {
+            delete[] adjacencyMatrix[i];
+        }
+        delete[] adjacencyMatrix;
+    }
+};
+
+// DRIVER CODE
+int main() {
+    int totalNodes = 6;
+
+    Graph g(totalNodes);
+
+    g.addEdge(0, 1);//0-1
+    g.addEdge(1, 2);//1-2
+    g.addEdge(1, 3);//1-3
+    g.addEdge(3, 4);//3-4
+    g.addEdge(2, 4);//2-4
+    g.addEdge(3, 5);//3-5
+
+    cout << "Adjacency Matrix:\n";
+    g.showMatrix();
+
+    return 0;
+}
+----------------------------
