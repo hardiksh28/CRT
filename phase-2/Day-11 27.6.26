@@ -307,3 +307,66 @@ int main() {
     return 0;
 }
 ---------------------------------
+Adjacency List (Weighted Directed Graph)
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+class Graph {
+private:
+    int nodes;
+    list<pair<int, int>>* adjacencyList;
+
+public:
+    // Constructor
+    Graph(int n) {
+        nodes = n;
+        adjacencyList = new list<pair<int, int>>[nodes];
+    }
+
+    // Add directed edge with weight
+    void addEdge(int source, int destination, int weight) {
+				
+        adjacencyList[source].push_back({destination, weight});
+
+    }
+
+    // Show adjacency list
+    void showList() {
+        for (int i = 0; i < nodes; ++i) {
+            cout << i;
+            for (auto& edge : adjacencyList[i]) {
+            	
+                cout << " -> [" << edge.first << ":  " << edge.second << "]";
+            
+			}
+            cout << endl;
+        }
+    }
+
+    // Destructor
+    ~Graph() {
+        delete[] adjacencyList;
+    }
+};
+
+// DRIVER CODE
+int main() {
+    int totalNodes = 6;
+    Graph g(totalNodes);
+
+    g.addEdge(0, 1, 15);
+    g.addEdge(1, 2, 20);
+    g.addEdge(1, 3, 12);
+    g.addEdge(2, 4, 22);
+    g.addEdge(3, 4, 35);
+    g.addEdge(3, 5, 25);
+
+    cout << "Adjacency List (Weighted Directed Graph):\n";
+    g.showList();
+
+    return 0;
+}
+-------------------------------------
