@@ -243,3 +243,67 @@ int main() {
     return 0;
 }
 ----------------------------
+Adjacwncy list
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+class Graph {
+private:
+    int nodes;
+    list<int>* adjacencyList;  // Array of lists
+
+public:
+    // Constructor
+    Graph(int n) {
+        nodes = n;
+        adjacencyList = new list<int>[nodes];  // Dynamic array of lists
+    }
+
+    // Add undirected edge
+    void addEdge(int source, int destination) {
+
+        adjacencyList[source].push_back(destination);
+        adjacencyList[destination].push_back(source);
+
+    }
+
+    // Display adjacency list
+    void showList() {
+        for (int i = 0; i < nodes; ++i) {
+            cout << i;
+            for (int neighbor : adjacencyList[i]) {
+                cout << " -> " << neighbor;
+            }
+            cout << endl;
+        }
+
+    }
+
+    // Destructor
+    ~Graph() {
+        delete[] adjacencyList;
+    }
+
+};
+
+
+// DRIVER CODE
+int main() {
+
+    int totalNodes = 4;
+    Graph g(totalNodes);
+
+    g.addEdge(0, 1);
+    g.addEdge(1, 2);
+    g.addEdge(2, 3);
+    g.addEdge(3, 0);
+
+    cout << "Adjacency List (using list):\n";
+    g.showList();
+
+    return 0;
+}
+---------------------------------
